@@ -5,43 +5,53 @@
 //  Created by Jeffery Thomas on 3/29/19.
 //  Copyright © 2019 JLT Source. All rights reserved.
 //
-// swiftlint:disable identifier_name
-//
 
 import Foundation
 import CommonCrypto
 
-internal class Symmetric {
+final public class Symmetric {
 
-    static let shared = Symmetric()
+    public static let shared = Symmetric()
 
-    func encrypt(_ data: Data) -> Data {
-        return crypt(.encrypt, data)
+    public func encrypt(_ data: Data) -> Data {
+        return crypt(CCOperation(kCCEncrypt), data)
     }
 
-    func decrypt(_ data: Data) -> Data {
-        return crypt(.decrypt, data)
+    public func decrypt(_ data: Data) -> Data {
+        return crypt(CCOperation(kCCDecrypt), data)
     }
 
     // MARK: Memory lifecycle
 
-    init(key: Data = .randomBytes(count: .keySizeAES128), iv: Data = .randomBytes(count: .blockSizeAES128)) {
+    public init(key: Data = createKey(), iv: Data = createIv()) { // swiftlint:disable:this identifier_name
         self.key = key
         self.iv = iv
     }
 
-    let key: Data
-    let iv: Data
+    public static func createKey() -> Data {
+        return .randomBytes(count: kCCKeySizeAES128)
+    }
+
+    public static func createIv() -> Data {
+        return .randomBytes(count: kCCBlockSizeAES128)
+    }
+
+    // MARK: Internal data
+
+    internal let key: Data
+    internal let iv: Data // swiftlint:disable:this identifier_name
+
+    // MARK: Private methods
 
     private func crypt(_ operation: CCOperation, _ data: Data) -> Data {
-        var result = Data(count: data.count + .blockSizeAES128)
+        var result = Data(count: data.count + kCCBlockSizeAES128)
         var resultCount = 0
 
         let status = result.withUnsafeMutableBytes { resultBuffer in
             key.withUnsafeBytes { keyBuffer in
                 iv.withUnsafeBytes { ivBuffer in
                     data.withUnsafeBytes { dataBuffer in
-                        CCCrypt(operation, .aes, .pkcs7Padding,
+                        CCCrypt(operation, CCAlgorithm(kCCAlgorithmAES), CCOptions(kCCOptionPKCS7Padding),
                                 keyBuffer.baseAddress, keyBuffer.count,
                                 ivBuffer.baseAddress,
                                 dataBuffer.baseAddress, dataBuffer.count,
@@ -57,22 +67,4 @@ internal class Symmetric {
         return result
     }
 
-}
-
-fileprivate extension CCOperation {
-    static let encrypt = CCOperation(kCCEncrypt)
-    static let decrypt = CCOperation(kCCDecrypt)
-}
-
-fileprivate extension CCAlgorithm {
-    static let aes = CCAlgorithm(kCCAlgorithmAES)
-}
-
-fileprivate extension CCOptions {
-    static let pkcs7Padding = CCOptions(kCCOptionPKCS7Padding)
-}
-
-fileprivate extension Int {
-    static let blockSizeAES128 = kCCBlockSizeAES128
-    static let keySizeAES128 = kCCKeySizeAES128
 }
