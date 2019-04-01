@@ -13,9 +13,9 @@
 		7B09E79D2251AD98000F208A /* EncryptedDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E79C2251AD98000F208A /* EncryptedDouble.swift */; };
 		7B09E79F2251AE01000F208A /* EncryptedBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E79E2251AE01000F208A /* EncryptedBool.swift */; };
 		7B09E7A122521D28000F208A /* EncryptedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E7A022521D28000F208A /* EncryptedData.swift */; };
-		7B13EFE5224EF02A000F7689 /* JLTEncryptedTypes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B13EFDB224EF02A000F7689 /* JLTEncryptedTypes.framework */; };
-		7B13EFEA224EF02A000F7689 /* JLTEncryptedTypesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B13EFE9224EF02A000F7689 /* JLTEncryptedTypesTests.swift */; };
-		7B13EFEC224EF02A000F7689 /* JLTEncryptedTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B13EFDE224EF02A000F7689 /* JLTEncryptedTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B13EFE5224EF02A000F7689 /* EncryptedTypes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B13EFDB224EF02A000F7689 /* EncryptedTypes.framework */; };
+		7B13EFEA224EF02A000F7689 /* EncryptedTypesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B13EFE9224EF02A000F7689 /* EncryptedTypesTests.swift */; };
+		7B13EFEC224EF02A000F7689 /* EncryptedTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B13EFDE224EF02A000F7689 /* EncryptedTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7B13EFF6224EF083000F7689 /* Symmetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B13EFF5224EF083000F7689 /* Symmetric.swift */; };
 		7B13EFF922503644000F7689 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B13EFF822503644000F7689 /* Data+Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -26,7 +26,7 @@
 			containerPortal = 7B13EFD2224EF02A000F7689 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7B13EFDA224EF02A000F7689;
-			remoteInfo = JLTEncryptedTypes;
+			remoteInfo = EncryptedTypes;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -37,11 +37,11 @@
 		7B09E79C2251AD98000F208A /* EncryptedDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedDouble.swift; sourceTree = "<group>"; };
 		7B09E79E2251AE01000F208A /* EncryptedBool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedBool.swift; sourceTree = "<group>"; };
 		7B09E7A022521D28000F208A /* EncryptedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedData.swift; sourceTree = "<group>"; };
-		7B13EFDB224EF02A000F7689 /* JLTEncryptedTypes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JLTEncryptedTypes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B13EFDE224EF02A000F7689 /* JLTEncryptedTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLTEncryptedTypes.h; sourceTree = "<group>"; };
+		7B13EFDB224EF02A000F7689 /* EncryptedTypes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EncryptedTypes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B13EFDE224EF02A000F7689 /* EncryptedTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EncryptedTypes.h; sourceTree = "<group>"; };
 		7B13EFDF224EF02A000F7689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7B13EFE4224EF02A000F7689 /* JLTEncryptedTypesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JLTEncryptedTypesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B13EFE9224EF02A000F7689 /* JLTEncryptedTypesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLTEncryptedTypesTests.swift; sourceTree = "<group>"; };
+		7B13EFE4224EF02A000F7689 /* EncryptedTypesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EncryptedTypesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B13EFE9224EF02A000F7689 /* EncryptedTypesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedTypesTests.swift; sourceTree = "<group>"; };
 		7B13EFEB224EF02A000F7689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B13EFF5224EF083000F7689 /* Symmetric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symmetric.swift; sourceTree = "<group>"; };
 		7B13EFF822503644000F7689 /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B13EFE5224EF02A000F7689 /* JLTEncryptedTypes.framework in Frameworks */,
+				7B13EFE5224EF02A000F7689 /* EncryptedTypes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,8 +69,8 @@
 		7B13EFD1224EF02A000F7689 = {
 			isa = PBXGroup;
 			children = (
-				7B13EFDD224EF02A000F7689 /* JLTEncryptedTypes */,
-				7B13EFE8224EF02A000F7689 /* JLTEncryptedTypesTests */,
+				7B13EFDD224EF02A000F7689 /* EncryptedTypes */,
+				7B13EFE8224EF02A000F7689 /* EncryptedTypesTests */,
 				7B13EFDC224EF02A000F7689 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,13 +78,13 @@
 		7B13EFDC224EF02A000F7689 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7B13EFDB224EF02A000F7689 /* JLTEncryptedTypes.framework */,
-				7B13EFE4224EF02A000F7689 /* JLTEncryptedTypesTests.xctest */,
+				7B13EFDB224EF02A000F7689 /* EncryptedTypes.framework */,
+				7B13EFE4224EF02A000F7689 /* EncryptedTypesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7B13EFDD224EF02A000F7689 /* JLTEncryptedTypes */ = {
+		7B13EFDD224EF02A000F7689 /* EncryptedTypes */ = {
 			isa = PBXGroup;
 			children = (
 				7B09E79E2251AE01000F208A /* EncryptedBool.swift */,
@@ -95,19 +95,19 @@
 				7B09E7982251A6A2000F208A /* Encrypted.swift */,
 				7B13EFF5224EF083000F7689 /* Symmetric.swift */,
 				7B13EFF822503644000F7689 /* Data+Extensions.swift */,
-				7B13EFDE224EF02A000F7689 /* JLTEncryptedTypes.h */,
+				7B13EFDE224EF02A000F7689 /* EncryptedTypes.h */,
 				7B13EFDF224EF02A000F7689 /* Info.plist */,
 			);
-			path = JLTEncryptedTypes;
+			path = EncryptedTypes;
 			sourceTree = "<group>";
 		};
-		7B13EFE8224EF02A000F7689 /* JLTEncryptedTypesTests */ = {
+		7B13EFE8224EF02A000F7689 /* EncryptedTypesTests */ = {
 			isa = PBXGroup;
 			children = (
-				7B13EFE9224EF02A000F7689 /* JLTEncryptedTypesTests.swift */,
+				7B13EFE9224EF02A000F7689 /* EncryptedTypesTests.swift */,
 				7B13EFEB224EF02A000F7689 /* Info.plist */,
 			);
-			path = JLTEncryptedTypesTests;
+			path = EncryptedTypesTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,16 +117,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B13EFEC224EF02A000F7689 /* JLTEncryptedTypes.h in Headers */,
+				7B13EFEC224EF02A000F7689 /* EncryptedTypes.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7B13EFDA224EF02A000F7689 /* JLTEncryptedTypes */ = {
+		7B13EFDA224EF02A000F7689 /* EncryptedTypes */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7B13EFEF224EF02A000F7689 /* Build configuration list for PBXNativeTarget "JLTEncryptedTypes" */;
+			buildConfigurationList = 7B13EFEF224EF02A000F7689 /* Build configuration list for PBXNativeTarget "EncryptedTypes" */;
 			buildPhases = (
 				7B13EFD6224EF02A000F7689 /* Headers */,
 				7B13EFD7224EF02A000F7689 /* Sources */,
@@ -138,14 +138,14 @@
 			);
 			dependencies = (
 			);
-			name = JLTEncryptedTypes;
-			productName = JLTEncryptedTypes;
-			productReference = 7B13EFDB224EF02A000F7689 /* JLTEncryptedTypes.framework */;
+			name = EncryptedTypes;
+			productName = EncryptedTypes;
+			productReference = 7B13EFDB224EF02A000F7689 /* EncryptedTypes.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7B13EFE3224EF02A000F7689 /* JLTEncryptedTypesTests */ = {
+		7B13EFE3224EF02A000F7689 /* EncryptedTypesTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7B13EFF2224EF02A000F7689 /* Build configuration list for PBXNativeTarget "JLTEncryptedTypesTests" */;
+			buildConfigurationList = 7B13EFF2224EF02A000F7689 /* Build configuration list for PBXNativeTarget "EncryptedTypesTests" */;
 			buildPhases = (
 				7B13EFE0224EF02A000F7689 /* Sources */,
 				7B13EFE1224EF02A000F7689 /* Frameworks */,
@@ -156,9 +156,9 @@
 			dependencies = (
 				7B13EFE7224EF02A000F7689 /* PBXTargetDependency */,
 			);
-			name = JLTEncryptedTypesTests;
-			productName = JLTEncryptedTypesTests;
-			productReference = 7B13EFE4224EF02A000F7689 /* JLTEncryptedTypesTests.xctest */;
+			name = EncryptedTypesTests;
+			productName = EncryptedTypesTests;
+			productReference = 7B13EFE4224EF02A000F7689 /* EncryptedTypesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -180,7 +180,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7B13EFD5224EF02A000F7689 /* Build configuration list for PBXProject "JLTEncryptedTypes" */;
+			buildConfigurationList = 7B13EFD5224EF02A000F7689 /* Build configuration list for PBXProject "EncryptedTypes" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -192,8 +192,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7B13EFDA224EF02A000F7689 /* JLTEncryptedTypes */,
-				7B13EFE3224EF02A000F7689 /* JLTEncryptedTypesTests */,
+				7B13EFDA224EF02A000F7689 /* EncryptedTypes */,
+				7B13EFE3224EF02A000F7689 /* EncryptedTypesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -255,7 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B13EFEA224EF02A000F7689 /* JLTEncryptedTypesTests.swift in Sources */,
+				7B13EFEA224EF02A000F7689 /* EncryptedTypesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +264,7 @@
 /* Begin PBXTargetDependency section */
 		7B13EFE7224EF02A000F7689 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7B13EFDA224EF02A000F7689 /* JLTEncryptedTypes */;
+			target = 7B13EFDA224EF02A000F7689 /* EncryptedTypes */;
 			targetProxy = 7B13EFE6224EF02A000F7689 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -403,7 +403,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = JLTEncryptedTypes/Info.plist;
+				INFOPLIST_FILE = EncryptedTypes/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -411,7 +411,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jltsource.JLTEncryptedTypes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jltsource.EncryptedTypes;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -431,7 +431,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = JLTEncryptedTypes/Info.plist;
+				INFOPLIST_FILE = EncryptedTypes/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -439,7 +439,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jltsource.JLTEncryptedTypes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jltsource.EncryptedTypes;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -453,13 +453,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7KZ9WRXA6T;
-				INFOPLIST_FILE = JLTEncryptedTypesTests/Info.plist;
+				INFOPLIST_FILE = EncryptedTypesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jltsource.JLTEncryptedTypesTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jltsource.EncryptedTypesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -472,13 +472,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7KZ9WRXA6T;
-				INFOPLIST_FILE = JLTEncryptedTypesTests/Info.plist;
+				INFOPLIST_FILE = EncryptedTypesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jltsource.JLTEncryptedTypesTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jltsource.EncryptedTypesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -488,7 +488,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7B13EFD5224EF02A000F7689 /* Build configuration list for PBXProject "JLTEncryptedTypes" */ = {
+		7B13EFD5224EF02A000F7689 /* Build configuration list for PBXProject "EncryptedTypes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B13EFED224EF02A000F7689 /* Debug */,
@@ -497,7 +497,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B13EFEF224EF02A000F7689 /* Build configuration list for PBXNativeTarget "JLTEncryptedTypes" */ = {
+		7B13EFEF224EF02A000F7689 /* Build configuration list for PBXNativeTarget "EncryptedTypes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B13EFF0224EF02A000F7689 /* Debug */,
@@ -506,7 +506,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B13EFF2224EF02A000F7689 /* Build configuration list for PBXNativeTarget "JLTEncryptedTypesTests" */ = {
+		7B13EFF2224EF02A000F7689 /* Build configuration list for PBXNativeTarget "EncryptedTypesTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B13EFF3224EF02A000F7689 /* Debug */,

@@ -1,15 +1,15 @@
 //
-//  JLTEncryptedTypesTests.swift
-//  JLTEncryptedTypesTests
+//  EncryptedTypesTests.swift
+//  EncryptedTypesTests
 //
 //  Created by Jeffery Thomas on 3/29/19.
-//  Copyright © 2019 JLT Source. All rights reserved.
+//  Copyright © 2019 JLT Source. No rights reserved.
 //
 
 import XCTest
-@testable import JLTEncryptedTypes
+@testable import EncryptedTypes
 
-class JLTEncryptedTypesTests: XCTestCase {
+class EncryptedTypesTests: XCTestCase {
 
     func testEncryptedBool() {
         let value = true

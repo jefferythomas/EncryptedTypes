@@ -1,9 +1,9 @@
 //
 //  Data+Extensions.swift
-//  JLTEncryptedTypes
+//  EncryptedTypes
 //
 //  Created by Jeffery Thomas on 3/30/19.
-//  Copyright © 2019 JLT Source. All rights reserved.
+//  Copyright © 2019 JLT Source. No rights reserved.
 //
 
 import Foundation
