@@ -20,6 +20,15 @@ class JLTEncryptedTypesTests: XCTestCase {
         XCTAssertEqual(encryptedBool.bool, value)
     }
 
+    func testEncryptedData() {
+        let value = Data("This is my test.  Will it work?".utf8)
+        let encryptedBool = EncryptedData()
+
+        encryptedBool.data = value
+
+        XCTAssertEqual(encryptedBool.data, value)
+    }
+
     func testEncryptedDouble() {
         let value = 123456789.987654321
         let encryptedDouble = EncryptedDouble()
