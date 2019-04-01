@@ -11,6 +11,42 @@ import XCTest
 
 class JLTEncryptedTypesTests: XCTestCase {
 
+    func testEncryptedBool() {
+        let value = true
+        let encryptedBool = EncryptedBool()
+
+        encryptedBool.bool = value
+
+        XCTAssertEqual(encryptedBool.bool, value)
+    }
+
+    func testEncryptedDouble() {
+        let value = 123456789.987654321
+        let encryptedDouble = EncryptedDouble()
+
+        encryptedDouble.double = value
+
+        XCTAssertEqual(encryptedDouble.double, value)
+    }
+
+    func testEncryptedInt() {
+        let value = 123456789
+        let encryptedInt = EncryptedInt()
+
+        encryptedInt.int = value
+
+        XCTAssertEqual(encryptedInt.int, value)
+    }
+
+    func testEncryptedString() {
+        let value = "This is my test.  Will it work?"
+        let encryptedString = EncryptedString()
+
+        encryptedString.string = value
+
+        XCTAssertEqual(encryptedString.string, value)
+    }
+
     func testSymmetric() {
         let symmetric = Symmetric()
         let text = "This is my test.  Will it work?"

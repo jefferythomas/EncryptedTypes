@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B09E79722518902000F208A /* EncryptedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E79622518902000F208A /* EncryptedString.swift */; };
+		7B09E7992251A6A2000F208A /* Encrypted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E7982251A6A2000F208A /* Encrypted.swift */; };
+		7B09E79B2251A865000F208A /* EncryptedInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E79A2251A865000F208A /* EncryptedInt.swift */; };
+		7B09E79D2251AD98000F208A /* EncryptedDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E79C2251AD98000F208A /* EncryptedDouble.swift */; };
+		7B09E79F2251AE01000F208A /* EncryptedBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E79E2251AE01000F208A /* EncryptedBool.swift */; };
 		7B13EFE5224EF02A000F7689 /* JLTEncryptedTypes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B13EFDB224EF02A000F7689 /* JLTEncryptedTypes.framework */; };
 		7B13EFEA224EF02A000F7689 /* JLTEncryptedTypesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B13EFE9224EF02A000F7689 /* JLTEncryptedTypesTests.swift */; };
 		7B13EFEC224EF02A000F7689 /* JLTEncryptedTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B13EFDE224EF02A000F7689 /* JLTEncryptedTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -25,6 +30,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B09E79622518902000F208A /* EncryptedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedString.swift; sourceTree = "<group>"; };
+		7B09E7982251A6A2000F208A /* Encrypted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encrypted.swift; sourceTree = "<group>"; };
+		7B09E79A2251A865000F208A /* EncryptedInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedInt.swift; sourceTree = "<group>"; };
+		7B09E79C2251AD98000F208A /* EncryptedDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedDouble.swift; sourceTree = "<group>"; };
+		7B09E79E2251AE01000F208A /* EncryptedBool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedBool.swift; sourceTree = "<group>"; };
 		7B13EFDB224EF02A000F7689 /* JLTEncryptedTypes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JLTEncryptedTypes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B13EFDE224EF02A000F7689 /* JLTEncryptedTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLTEncryptedTypes.h; sourceTree = "<group>"; };
 		7B13EFDF224EF02A000F7689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,10 +85,15 @@
 		7B13EFDD224EF02A000F7689 /* JLTEncryptedTypes */ = {
 			isa = PBXGroup;
 			children = (
-				7B13EFDE224EF02A000F7689 /* JLTEncryptedTypes.h */,
-				7B13EFDF224EF02A000F7689 /* Info.plist */,
+				7B09E79E2251AE01000F208A /* EncryptedBool.swift */,
+				7B09E79C2251AD98000F208A /* EncryptedDouble.swift */,
+				7B09E79A2251A865000F208A /* EncryptedInt.swift */,
+				7B09E79622518902000F208A /* EncryptedString.swift */,
+				7B09E7982251A6A2000F208A /* Encrypted.swift */,
 				7B13EFF5224EF083000F7689 /* Symmetric.swift */,
 				7B13EFF822503644000F7689 /* Data+Extensions.swift */,
+				7B13EFDE224EF02A000F7689 /* JLTEncryptedTypes.h */,
+				7B13EFDF224EF02A000F7689 /* Info.plist */,
 			);
 			path = JLTEncryptedTypes;
 			sourceTree = "<group>";
@@ -222,8 +237,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B09E7992251A6A2000F208A /* Encrypted.swift in Sources */,
+				7B09E79B2251A865000F208A /* EncryptedInt.swift in Sources */,
 				7B13EFF6224EF083000F7689 /* Symmetric.swift in Sources */,
+				7B09E79F2251AE01000F208A /* EncryptedBool.swift in Sources */,
+				7B09E79722518902000F208A /* EncryptedString.swift in Sources */,
 				7B13EFF922503644000F7689 /* Data+Extensions.swift in Sources */,
+				7B09E79D2251AD98000F208A /* EncryptedDouble.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
