@@ -15,45 +15,45 @@ class EncryptedTypesTests: XCTestCase {
         let value = true
         let encryptedBool = EncryptedBool()
 
-        encryptedBool.bool = value
+        encryptedBool.value = value
 
-        XCTAssertEqual(encryptedBool.bool, value)
+        XCTAssertEqual(encryptedBool.value, value)
     }
 
     func testEncryptedData() {
         let value = Data("This is my test.  Will it work?".utf8)
         let encryptedBool = EncryptedData()
 
-        encryptedBool.data = value
+        encryptedBool.value = value
 
-        XCTAssertEqual(encryptedBool.data, value)
+        XCTAssertEqual(encryptedBool.value, value)
     }
 
     func testEncryptedDouble() {
         let value = 123456789.987654321
         let encryptedDouble = EncryptedDouble()
 
-        encryptedDouble.double = value
+        encryptedDouble.value = value
 
-        XCTAssertEqual(encryptedDouble.double, value)
+        XCTAssertEqual(encryptedDouble.value, value)
     }
 
     func testEncryptedInt() {
         let value = 123456789
         let encryptedInt = EncryptedInt()
 
-        encryptedInt.int = value
+        encryptedInt.value = value
 
-        XCTAssertEqual(encryptedInt.int, value)
+        XCTAssertEqual(encryptedInt.value, value)
     }
 
     func testEncryptedString() {
         let value = "This is my test.  Will it work?"
         let encryptedString = EncryptedString()
 
-        encryptedString.string = value
+        encryptedString.value = value
 
-        XCTAssertEqual(encryptedString.string, value)
+        XCTAssertEqual(encryptedString.value, value)
     }
 
     func testSymmetric() {

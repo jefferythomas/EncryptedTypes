@@ -18,6 +18,7 @@
 		7B13EFEC224EF02A000F7689 /* EncryptedTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B13EFDE224EF02A000F7689 /* EncryptedTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7B13EFF6224EF083000F7689 /* Symmetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B13EFF5224EF083000F7689 /* Symmetric.swift */; };
 		7B13EFF922503644000F7689 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B13EFF822503644000F7689 /* Data+Extensions.swift */; };
+		7BB0FD232252DC4700DAA9B5 /* BaseEncrypted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB0FD222252DC4700DAA9B5 /* BaseEncrypted.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		7B13EFEB224EF02A000F7689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B13EFF5224EF083000F7689 /* Symmetric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symmetric.swift; sourceTree = "<group>"; };
 		7B13EFF822503644000F7689 /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
+		7BB0FD222252DC4700DAA9B5 /* BaseEncrypted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEncrypted.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				7B09E79C2251AD98000F208A /* EncryptedDouble.swift */,
 				7B09E79A2251A865000F208A /* EncryptedInt.swift */,
 				7B09E79622518902000F208A /* EncryptedString.swift */,
+				7BB0FD222252DC4700DAA9B5 /* BaseEncrypted.swift */,
 				7B09E7982251A6A2000F208A /* Encrypted.swift */,
 				7B13EFF5224EF083000F7689 /* Symmetric.swift */,
 				7B13EFF822503644000F7689 /* Data+Extensions.swift */,
@@ -247,6 +250,7 @@
 				7B09E79722518902000F208A /* EncryptedString.swift in Sources */,
 				7B13EFF922503644000F7689 /* Data+Extensions.swift in Sources */,
 				7B09E7A122521D28000F208A /* EncryptedData.swift in Sources */,
+				7BB0FD232252DC4700DAA9B5 /* BaseEncrypted.swift in Sources */,
 				7B09E79D2251AD98000F208A /* EncryptedDouble.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

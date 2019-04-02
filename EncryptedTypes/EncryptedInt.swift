@@ -8,31 +8,14 @@
 
 import Foundation
 
-open class EncryptedInt: Encrypted {
+open class EncryptedInt: BaseEncrypted<Int> {
 
-    public let symmetric: Symmetric
-
-    open var int: Int? {
-        get { return decrypt(encrypted) }
-        set { encrypted = encrypt(newValue) }
-    }
-
-    open func fromData(_ data: Data?) -> Int? {
+    open override func fromData(_ data: Data?) -> Int? {
         return data?.withUnsafeBytes { $0.baseAddress?.bindMemory(to: Int.self, capacity: 1).pointee }
     }
 
-    open func toData(_ value: Int?) -> Data? {
+    open override func toData(_ value: Int?) -> Data? {
         return value.map { withUnsafeBytes(of: $0) { Data($0) } }
     }
-
-    // MARK: Memory lifecycle
-
-    init(symmetric: Symmetric = .shared) {
-        self.symmetric = symmetric
-    }
-
-    // MARK: Private properties
-
-    private var encrypted: Data?
 
 }
