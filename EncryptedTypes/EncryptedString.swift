@@ -8,7 +8,7 @@
 
 import Foundation
 
-open class EncryptedString: BaseEncrypted<String> {
+open class EncryptedString: Encrypted<String> {
 
     open override func fromData(_ data: Data?) -> String? {
         return data.flatMap { String(bytes: $0, encoding: .utf8) }

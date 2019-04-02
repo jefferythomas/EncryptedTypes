@@ -8,7 +8,7 @@
 
 import Foundation
 
-open class EncryptedData: BaseEncrypted<Data> {
+open class EncryptedData: Encrypted<Data> {
 
     open override func fromData(_ data: Data?) -> Data? {
         return data

@@ -2,36 +2,37 @@
 //  Encrypted.swift
 //  EncryptedTypes
 //
-//  Created by Jeffery Thomas on 3/31/19.
-//  Copyright © 2019 JLT Source. No rights reserved.
+//  Created by Jeffery Thomas on 4/1/19.
+//  Copyright © 2019 JLT Source. All rights reserved.
 //
 
 import Foundation
 
-public protocol Encrypted {
+open class Encrypted<Value>: EncryptedType {
 
-    associatedtype Value
+    public let symmetric: Symmetric
 
-    var symmetric: Symmetric { get }
-
-    func encrypt(_ value: Value?) -> Data?
-    func decrypt(_ encrypted: Data?) -> Value?
-
-    func fromData(_ data: Data?) -> Value?
-    func toData(_ value: Value?) -> Data?
-
-}
-
-public extension Encrypted {
-
-    var symmetric: Symmetric { return .shared }
-
-    func encrypt(_ value: Value?) -> Data? {
-        return toData(value).map { symmetric.encrypt($0) }
+    open var value: Value? {
+        get { return decrypt(encrypted) }
+        set { encrypted = encrypt(newValue) }
     }
 
-    func decrypt(_ encrypted: Data?) -> Value? {
-        return fromData(encrypted.map { symmetric.decrypt($0) })
+    open func fromData(_ data: Data?) -> Value? {
+        fatalError("fromData(_:) must be overloaded in a subclass")
     }
+
+    open func toData(_ value: Value?) -> Data? {
+        fatalError("toData(_:) must be overloaded in a subclass")
+    }
+
+    // MARK: Memory lifecycle
+
+    init(symmetric: Symmetric = .shared) {
+        self.symmetric = symmetric
+    }
+
+    // MARK: Private properties
+
+    private var encrypted: Data?
 
 }

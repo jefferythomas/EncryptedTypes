@@ -8,7 +8,7 @@
 
 import Foundation
 
-open class EncryptedDouble: BaseEncrypted<Double> {
+open class EncryptedDouble: Encrypted<Double> {
 
     open override func fromData(_ data: Data?) -> Double? {
         return data?.withUnsafeBytes { $0.baseAddress?.bindMemory(to: Double.self, capacity: 1).pointee }
