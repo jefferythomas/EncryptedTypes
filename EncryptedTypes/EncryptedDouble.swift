@@ -8,6 +8,8 @@
 
 import Foundation
 
+/// An encrypted wrapper for a Double. The `value` property is used to access a
+/// temporary unencrypted value.
 open class EncryptedDouble: Encrypted<Double> {
 
     open override func fromData(_ data: Data?) -> Double? {

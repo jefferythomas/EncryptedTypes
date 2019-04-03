@@ -8,6 +8,8 @@
 
 import Foundation
 
+/// An encrypted wrapper for an Int. The `value` property is used to access a
+/// temporary unencrypted value.
 open class EncryptedInt: Encrypted<Int> {
 
     open override func fromData(_ data: Data?) -> Int? {
