@@ -35,7 +35,7 @@ open class Encrypted<Value>: EncryptedType {
 
     // MARK: Memory lifecycle
 
-    init(symmetric: Symmetric = .shared) {
+    public init(symmetric: Symmetric = .shared) {
         self.symmetric = symmetric
     }
 

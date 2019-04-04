@@ -13,11 +13,11 @@ import Foundation
 open class EncryptedInt: Encrypted<Int> {
 
     open override func fromData(_ data: Data?) -> Int? {
-        return data?.withUnsafeBytes { $0.baseAddress?.bindMemory(to: Int.self, capacity: 1).pointee }
+        return data?.cast(to: Int.self)
     }
 
     open override func toData(_ value: Int?) -> Data? {
-        return value.map { withUnsafeBytes(of: $0) { Data($0) } }
+        return Data(castFrom: value)
     }
 
 }

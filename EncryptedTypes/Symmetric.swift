@@ -47,15 +47,15 @@ final public class Symmetric {
         var result = Data(count: data.count + kCCBlockSizeAES128)
         var resultCount = 0
 
-        let status = result.withUnsafeMutableBytes { resultBuffer in
-            key.withUnsafeBytes { keyBuffer in
-                iv.withUnsafeBytes { ivBuffer in
-                    data.withUnsafeBytes { dataBuffer in
+        let status = result.withUnsafeMutableBuffer { resultBuffer, resultBufferCount in
+            key.withUnsafeBuffer { keyBuffer, keyBufferCount in
+                iv.withUnsafeBuffer { ivBuffer, _ in
+                    data.withUnsafeBuffer { dataBuffer, dataBufferCount in
                         CCCrypt(operation, CCAlgorithm(kCCAlgorithmAES), CCOptions(kCCOptionPKCS7Padding),
-                                keyBuffer.baseAddress, keyBuffer.count,
-                                ivBuffer.baseAddress,
-                                dataBuffer.baseAddress, dataBuffer.count,
-                                resultBuffer.baseAddress, resultBuffer.count,
+                                keyBuffer, keyBufferCount,
+                                ivBuffer,
+                                dataBuffer, dataBufferCount,
+                                resultBuffer, resultBufferCount,
                                 &resultCount)
                     }
                 }

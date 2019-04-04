@@ -15,4 +15,36 @@ internal extension Data {
         return Data((0 ..< count).map { _ in .random(in: .min ... .max) })
     }
 
+    func cast<Value>(to type: Value.Type) -> Value? {
+        #if swift(>=5.0)
+        return withUnsafeBytes { $0.baseAddress?.bindMemory(to: type, capacity: 1).pointee }
+        #else
+        guard count == MemoryLayout<Value>.size else { return nil }
+        return withUnsafeBytes { $0.pointee }
+        #endif
+    }
+
+    init?<Value>(castFrom value: Value?) {
+        guard let value = value else { return nil }
+        self = Swift.withUnsafeBytes(of: value) { Data($0) }
+    }
+
+    func withUnsafeBuffer<ResultType>(_ body: (UnsafeRawPointer, Int) -> ResultType) -> ResultType {
+        #if swift(>=5.0)
+        return withUnsafeBytes { body($0.baseAddress, $0.count) }
+        #else
+        let count = self.count
+        return withUnsafeBytes { body($0, count) }
+        #endif
+    }
+
+    mutating func withUnsafeMutableBuffer<Result>(_ body: (UnsafeMutableRawPointer, Int) -> Result) -> Result {
+        #if swift(>=5.0)
+        return withUnsafeMutableBytes { body($0.baseAddress, $0.count) }
+        #else
+        let count = self.count
+        return withUnsafeMutableBytes { body($0, count) }
+        #endif
+    }
+
 }
