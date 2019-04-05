@@ -14,46 +14,61 @@ class EncryptedTypesTests: XCTestCase {
     func testEncryptedBool() {
         let value = true
         let encryptedBool = EncryptedBool()
+        XCTAssertEqual(encryptedBool.value, nil)
 
         encryptedBool.value = value
-
         XCTAssertEqual(encryptedBool.value, value)
+
+        encryptedBool.value = nil
+        XCTAssertEqual(encryptedBool.value, nil)
     }
 
     func testEncryptedData() {
         let value = Data("This is my test.  Will it work?".utf8)
-        let encryptedBool = EncryptedData()
+        let encryptedData = EncryptedData()
+        XCTAssertEqual(encryptedData.value, nil)
 
-        encryptedBool.value = value
+        encryptedData.value = value
+        XCTAssertEqual(encryptedData.value, value)
 
-        XCTAssertEqual(encryptedBool.value, value)
+        encryptedData.value = nil
+        XCTAssertEqual(encryptedData.value, nil)
     }
 
     func testEncryptedDouble() {
         let value = 123456789.987654321
         let encryptedDouble = EncryptedDouble()
+        XCTAssertEqual(encryptedDouble.value, nil)
 
         encryptedDouble.value = value
-
         XCTAssertEqual(encryptedDouble.value, value)
+
+        encryptedDouble.value = nil
+        XCTAssertEqual(encryptedDouble.value, nil)
     }
 
     func testEncryptedInt() {
         let value = 123456789
         let encryptedInt = EncryptedInt()
+        XCTAssertEqual(encryptedInt.value, nil)
 
         encryptedInt.value = value
-
         XCTAssertEqual(encryptedInt.value, value)
+
+        encryptedInt.value = nil
+        XCTAssertEqual(encryptedInt.value, nil)
     }
 
     func testEncryptedString() {
         let value = "This is my test.  Will it work?"
         let encryptedString = EncryptedString()
+        XCTAssertEqual(encryptedString.value, nil)
 
         encryptedString.value = value
-
         XCTAssertEqual(encryptedString.value, value)
+
+        encryptedString.value = nil
+        XCTAssertEqual(encryptedString.value, nil)
     }
 
     func testSymmetric() {

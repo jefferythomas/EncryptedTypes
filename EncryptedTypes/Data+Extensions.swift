@@ -29,7 +29,7 @@ internal extension Data {
         self = Swift.withUnsafeBytes(of: value) { Data($0) }
     }
 
-    func withUnsafeBuffer<ResultType>(_ body: (UnsafeRawPointer, Int) -> ResultType) -> ResultType {
+    func withUnsafeBuffer<ResultType>(_ body: (UnsafeRawPointer?, Int) -> ResultType) -> ResultType {
         #if swift(>=5.0)
         return withUnsafeBytes { body($0.baseAddress, $0.count) }
         #else
@@ -38,7 +38,7 @@ internal extension Data {
         #endif
     }
 
-    mutating func withUnsafeMutableBuffer<Result>(_ body: (UnsafeMutableRawPointer, Int) -> Result) -> Result {
+    mutating func withUnsafeMutableBuffer<Result>(_ body: (UnsafeMutableRawPointer?, Int) -> Result) -> Result {
         #if swift(>=5.0)
         return withUnsafeMutableBytes { body($0.baseAddress, $0.count) }
         #else
