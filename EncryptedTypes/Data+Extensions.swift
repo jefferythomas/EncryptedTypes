@@ -15,7 +15,7 @@ internal extension Data {
         return Data((0 ..< count).map { _ in .random(in: .min ... .max) })
     }
 
-    func cast<Value>(to type: Value.Type) -> Value? {
+    func cast<Value>(as type: Value.Type) -> Value? {
         #if swift(>=5.0)
         return withUnsafeBytes { $0.baseAddress?.bindMemory(to: type, capacity: 1).pointee }
         #else
@@ -24,8 +24,7 @@ internal extension Data {
         #endif
     }
 
-    init?<Value>(castFrom value: Value?) {
-        guard let value = value else { return nil }
+    init<Value>(cast value: Value, as type: Value.Type) {
         self = Swift.withUnsafeBytes(of: value) { Data($0) }
     }
 

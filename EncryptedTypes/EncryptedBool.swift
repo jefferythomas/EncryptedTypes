@@ -13,11 +13,11 @@ import Foundation
 open class EncryptedBool: Encrypted<Bool> {
 
     open override func fromData(_ data: Data?) -> Bool? {
-        return data?.cast(to: Bool.self)
+        return data?.cast(as: Bool.self)
     }
 
     open override func toData(_ value: Bool?) -> Data? {
-        return Data(castFrom: value)
+        return value.map { Data(cast: $0, as: Bool.self) }
     }
 
 }
