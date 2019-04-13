@@ -19,13 +19,19 @@ public protocol EncryptedType {
 
     associatedtype Value
 
-    /// Temporary access to the unencrypted value.
+    /**
+     Temporary access to the unencrypted value.
+     */
     var value: Value? { get set }
 
-    /// Return the value from a given data object.
+    /**
+     Return the value from a given data object.
+     */
     func fromData(_ data: Data?) -> Value?
 
-    /// Return a data object from the given value.
+    /**
+     Return a data object from the given value.
+     */
     func toData(_ value: Value?) -> Data?
 
 }
@@ -34,12 +40,16 @@ public extension EncryptedType {
 
     var symmetric: Symmetric { return .shared }
 
-    /// Encrypt the given value to an encrypted data block.
+    /**
+     Encrypt the given value to an encrypted data block.
+     */
     func encrypt(_ value: Value?) -> Data? {
         return toData(value).map { symmetric.encrypt($0) }
     }
 
-    /// Decrypt the value from a given encrypted data.
+    /**
+     Decrypt the value from a given encrypted data.
+     */
     func decrypt(_ encrypted: Data?) -> Value? {
         return fromData(encrypted.map { symmetric.decrypt($0) })
     }

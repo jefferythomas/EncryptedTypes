@@ -3,7 +3,7 @@
 //  EncryptedTypesTests
 //
 //  Created by Thomas, Jeffery on 4/11/19.
-//  Copyright © 2019 JLT Source. All rights reserved.
+//  Copyright © 2019 JLT Source. No rights reserved.
 //
 
 import XCTest

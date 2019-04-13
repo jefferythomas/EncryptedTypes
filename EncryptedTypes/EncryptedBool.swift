@@ -8,8 +8,10 @@
 
 import Foundation
 
-/// An encrypted wrapper for a Bool. The `value` property is used to access a
-/// temporary unencrypted value.
+/**
+ An encrypted wrapper for a Bool. The `value` property is used to access a
+ temporary unencrypted value.
+ */
 open class EncryptedBool: Encrypted<Bool> {
 
     open override func fromData(_ data: Data?) -> Bool? {

@@ -10,7 +10,9 @@ import Foundation
 
 internal extension Data {
 
-    /// Create a data object of count bytes filled with random data.
+    /**
+     Create a data object of count bytes filled with random data.
+     */
     static func randomBytes(count: Int) -> Data {
         return Data((0 ..< count).map { _ in .random(in: .min ... .max) })
     }
