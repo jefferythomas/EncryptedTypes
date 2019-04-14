@@ -11,6 +11,16 @@ import XCTest
 
 class EncryptedTypesInternalTests: XCTestCase {
 
+    func testCast() {
+        let value = Data(cast: 1, as: Int.self)
+        XCTAssertEqual(value.cast(as: Int.self), 1)
+    }
+
+    func testInvalidCastAs() {
+        let invalidValue = Data()
+        XCTAssertEqual(invalidValue.cast(as: Int.self), nil)
+    }
+
     func testSymmetric() {
         let symmetric = Symmetric()
         let text = "This is my test.  Will it work?"

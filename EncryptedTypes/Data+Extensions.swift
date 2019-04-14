@@ -6,8 +6,6 @@
 //  Copyright © 2019 JLT Source. No rights reserved.
 //
 
-import Foundation
-
 internal extension Data {
 
     /**
@@ -17,6 +15,9 @@ internal extension Data {
         return Data((0 ..< count).map { _ in .random(in: .min ... .max) })
     }
 
+    /**
+     Map the memory in data to the specified type.
+     */
     func cast<Value>(as type: Value.Type) -> Value? {
         #if swift(>=5.0)
         return withUnsafeBytes { $0.baseAddress?.bindMemory(to: type, capacity: 1).pointee }
@@ -26,11 +27,17 @@ internal extension Data {
         #endif
     }
 
+    /**
+     Map the memory from the given value of given type to a Data object.
+     */
     init<Value>(cast value: Value, as type: Value.Type) {
         self = Swift.withUnsafeBytes(of: value) { Data($0) }
     }
 
-    func withUnsafeBuffer<ResultType>(_ body: (UnsafeRawPointer?, Int) -> ResultType) -> ResultType {
+    /**
+     Version safe access to `withUnsafeBytes(_:)`.
+     */
+    func withUnsafeBuffer<Result>(_ body: (UnsafeRawPointer?, Int) -> Result) -> Result {
         #if swift(>=5.0)
         return withUnsafeBytes { body($0.baseAddress, $0.count) }
         #else
@@ -39,6 +46,9 @@ internal extension Data {
         #endif
     }
 
+    /**
+     Version safe access to `withUnsafeMutableBytes(_:)`.
+     */
     mutating func withUnsafeMutableBuffer<Result>(_ body: (UnsafeMutableRawPointer?, Int) -> Result) -> Result {
         #if swift(>=5.0)
         return withUnsafeMutableBytes { body($0.baseAddress, $0.count) }

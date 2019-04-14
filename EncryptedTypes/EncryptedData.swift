@@ -6,8 +6,6 @@
 //  Copyright © 2019 JLT Source. No rights reserved.
 //
 
-import Foundation
-
 /**
  An encrypted wrapper for Data. The `value` property is used to access a
  temporary unencrypted value.

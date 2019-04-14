@@ -6,7 +6,6 @@
 //  Copyright © 2019 JLT Source. No rights reserved.
 //
 
-import Foundation
 import CommonCrypto
 
 final public class Symmetric {

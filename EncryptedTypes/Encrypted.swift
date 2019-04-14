@@ -6,24 +6,40 @@
 //  Copyright © 2019 JLT Source. No rights reserved.
 //
 
-import Foundation
-
 /**
-  The base class for encrypted types that simplifies the implementation of the
-  EncryptedType protocol. Subclasses only need to implement `fromData(_:)` and
-  `toData(_:)`
+ The base class for encrypted types that simplifies the implementation of the
+ ValueHolder and Encryptor protocols. Subclasses only need to implement
+ `fromData(_:)` and `toData(_:)`
  */
-open class Encrypted<Value>: EncryptedType {
+open class Encrypted<Value>: ValueHolder, Encryptor {
 
-    public let symmetric: Symmetric
+    // MARK: ValueHolder
 
     /**
      Temporary access to the unencrypted value.
      */
     open var value: Value? {
-        get { return decrypt(encrypted) }
-        set { encrypted = encrypt(newValue) }
+        get { return decrypt() }
+        set { encrypt(newValue) }
     }
+
+    // MARK: Encryptor
+
+    /**
+     Decrypt the value from a given encrypted data.
+     */
+    open func decrypt() -> Value? {
+        return fromData(encrypted.map { symmetric.decrypt($0) })
+    }
+
+    /**
+     Encrypt the given value to an encrypted data block.
+     */
+    open func encrypt(_ value: Value?) {
+        encrypted = toData(value).map { symmetric.encrypt($0) }
+    }
+
+    // MARK: Required overrides
 
     /**
      Return the value from a given data object.
@@ -47,6 +63,7 @@ open class Encrypted<Value>: EncryptedType {
 
     // MARK: Private properties
 
+    private let symmetric: Symmetric
     private var encrypted: Data?
 
 }
