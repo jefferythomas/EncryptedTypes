@@ -2,7 +2,7 @@
 //  EncryptedTypesInternalTests.swift
 //  EncryptedTypesTests
 //
-//  Created by Thomas, Jeffery on 4/11/19.
+//  Created by Jeffery Thomas on 4/11/19.
 //  Copyright © 2019 JLT Source. No rights reserved.
 //
 
@@ -12,13 +12,13 @@ import XCTest
 class EncryptedTypesInternalTests: XCTestCase {
 
     func testCast() {
-        let value = Data(cast: 1, as: Int.self)
-        XCTAssertEqual(value.cast(as: Int.self), 1)
+        let value = Data(memoryMapped: 1, as: Int.self)
+        XCTAssertEqual(value.memoryMapped(as: Int.self), 1)
     }
 
     func testInvalidCastAs() {
         let invalidValue = Data()
-        XCTAssertEqual(invalidValue.cast(as: Int.self), nil)
+        XCTAssertEqual(invalidValue.memoryMapped(as: Int.self), nil)
     }
 
     func testSymmetric() {

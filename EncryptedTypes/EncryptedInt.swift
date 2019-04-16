@@ -13,11 +13,11 @@
 open class EncryptedInt: Encrypted<Int> {
 
     open override func fromData(_ data: Data?) -> Int? {
-        return data?.cast(as: Int.self)
+        return data?.memoryMapped(as: Int.self)
     }
 
     open override func toData(_ value: Int?) -> Data? {
-        return value.map { Data(cast: $0, as: Int.self) }
+        return value.map { Data(memoryMapped: $0, as: Int.self) }
     }
 
 }

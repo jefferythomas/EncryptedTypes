@@ -18,7 +18,7 @@ internal extension Data {
     /**
      Map the memory in data to the specified type.
      */
-    func cast<Value>(as type: Value.Type) -> Value? {
+    func memoryMapped<Value>(as type: Value.Type) -> Value? {
         #if swift(>=5.0)
         return withUnsafeBytes { $0.baseAddress?.bindMemory(to: type, capacity: 1).pointee }
         #else
@@ -30,7 +30,7 @@ internal extension Data {
     /**
      Map the memory from the given value of given type to a Data object.
      */
-    init<Value>(cast value: Value, as type: Value.Type) {
+    init<Value>(memoryMapped value: Value, as type: Value.Type) {
         self = Swift.withUnsafeBytes(of: value) { Data($0) }
     }
 

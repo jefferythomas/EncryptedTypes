@@ -13,11 +13,11 @@
 open class EncryptedDouble: Encrypted<Double> {
 
     open override func fromData(_ data: Data?) -> Double? {
-        return data?.cast(as: Double.self)
+        return data?.memoryMapped(as: Double.self)
     }
 
     open override func toData(_ value: Double?) -> Data? {
-        return value.map { Data(cast: $0, as: Double.self) }
+        return value.map { Data(memoryMapped: $0, as: Double.self) }
     }
 
 }
