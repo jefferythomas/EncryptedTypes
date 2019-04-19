@@ -11,7 +11,6 @@
  temporary unencrypted value.
  */
 open class EncryptedData: Encrypted<Data> {
-
     open override func fromData(_ data: Data?) -> Data? {
         return data
     }
@@ -19,5 +18,4 @@ open class EncryptedData: Encrypted<Data> {
     open override func toData(_ value: Data?) -> Data? {
         return value
     }
-
 }

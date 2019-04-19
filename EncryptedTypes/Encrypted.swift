@@ -12,7 +12,6 @@
  `fromData(_:)` and `toData(_:)`
  */
 open class Encrypted<Value>: ValueHolder, Encryptor {
-
     // MARK: ValueHolder
 
     /**
@@ -44,14 +43,14 @@ open class Encrypted<Value>: ValueHolder, Encryptor {
     /**
      Return the value from a given data object.
      */
-    open func fromData(_ data: Data?) -> Value? {
+    open func fromData(_: Data?) -> Value? {
         fatalError("fromData(_:) must be overloaded in a subclass")
     }
 
     /**
      Return a data object from the given value.
      */
-    open func toData(_ value: Value?) -> Data? {
+    open func toData(_: Value?) -> Data? {
         fatalError("toData(_:) must be overloaded in a subclass")
     }
 
@@ -65,5 +64,4 @@ open class Encrypted<Value>: ValueHolder, Encryptor {
 
     private let symmetric: Symmetric
     private var encrypted: Data?
-
 }

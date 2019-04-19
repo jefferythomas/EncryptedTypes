@@ -7,7 +7,6 @@
 //
 
 internal extension Data {
-
     /**
      Create a data object of count bytes filled with random data.
      */
@@ -30,7 +29,7 @@ internal extension Data {
     /**
      Map the memory from the given value of given type to a Data object.
      */
-    init<Value>(memoryMapped value: Value, as type: Value.Type) {
+    init<Value>(memoryMapped value: Value, as _: Value.Type) {
         self = Swift.withUnsafeBytes(of: value) { Data($0) }
     }
 
@@ -57,5 +56,4 @@ internal extension Data {
         return withUnsafeMutableBytes { body($0, count) }
         #endif
     }
-
 }

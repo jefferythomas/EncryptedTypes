@@ -10,12 +10,10 @@
  A type that exposes a value.
  */
 public protocol ValueHolder {
-
     associatedtype Value
 
     /**
      Access the value contained by the `ValueHolder`.
      */
     var value: Value? { get set }
-
 }

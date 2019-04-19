@@ -1,0 +1,7 @@
+--ifdef no-indent
+
+# file options
+--exclude Carthage
+
+# rules
+--enable trailingClosures

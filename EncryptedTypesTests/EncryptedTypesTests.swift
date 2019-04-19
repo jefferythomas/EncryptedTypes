@@ -6,11 +6,10 @@
 //  Copyright © 2019 JLT Source. No rights reserved.
 //
 
-import XCTest
 import EncryptedTypes
+import XCTest
 
 class EncryptedTypesTests: XCTestCase {
-
     func testEncryptedBool() {
         let value = true
         let encryptedBool = EncryptedBool()
@@ -36,7 +35,7 @@ class EncryptedTypesTests: XCTestCase {
     }
 
     func testEncryptedDouble() {
-        let value = 123456789.987654321
+        let value = 123_456_789.987654321
         let encryptedDouble = EncryptedDouble()
         XCTAssertEqual(encryptedDouble.value, nil)
 
@@ -48,7 +47,7 @@ class EncryptedTypesTests: XCTestCase {
     }
 
     func testEncryptedInt() {
-        let value = 123456789
+        let value = 123_456_789
         let encryptedInt = EncryptedInt()
         XCTAssertEqual(encryptedInt.value, nil)
 
@@ -70,5 +69,4 @@ class EncryptedTypesTests: XCTestCase {
         encryptedString.value = nil
         XCTAssertEqual(encryptedString.value, nil)
     }
-
 }

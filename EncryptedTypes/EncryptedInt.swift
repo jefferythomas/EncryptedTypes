@@ -11,7 +11,6 @@
  temporary unencrypted value.
  */
 open class EncryptedInt: Encrypted<Int> {
-
     open override func fromData(_ data: Data?) -> Int? {
         return data?.memoryMapped(as: Int.self)
     }
@@ -19,5 +18,4 @@ open class EncryptedInt: Encrypted<Int> {
     open override func toData(_ value: Int?) -> Data? {
         return value.map { Data(memoryMapped: $0, as: Int.self) }
     }
-
 }

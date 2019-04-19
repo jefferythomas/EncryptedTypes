@@ -10,7 +10,6 @@
  An encryptor that can encrypt and decrypt a value.
  */
 public protocol Encryptor {
-
     associatedtype Value
 
     /**
@@ -22,5 +21,4 @@ public protocol Encryptor {
      Encrypt a given value to an encrypted data block.
      */
     mutating func encrypt(_ value: Value?)
-
 }

@@ -6,11 +6,10 @@
 //  Copyright © 2019 JLT Source. No rights reserved.
 //
 
-import XCTest
 @testable import EncryptedTypes
+import XCTest
 
 class EncryptedTypesInternalTests: XCTestCase {
-
     func testCast() {
         let value = Data(memoryMapped: 1, as: Int.self)
         XCTAssertEqual(value.memoryMapped(as: Int.self), 1)
@@ -53,5 +52,4 @@ class EncryptedTypesInternalTests: XCTestCase {
         XCTAssertNotEqual(encrypted, Data(text.utf8))
         XCTAssertEqual(String(bytes: decrypted, encoding: .utf8), text)
     }
-
 }

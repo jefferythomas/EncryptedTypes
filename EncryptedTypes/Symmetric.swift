@@ -8,8 +8,7 @@
 
 import CommonCrypto
 
-final public class Symmetric {
-
+public final class Symmetric {
     public static let shared = Symmetric()
 
     public func encrypt(_ data: Data) -> Data {
@@ -65,5 +64,4 @@ final public class Symmetric {
         result.count = resultCount
         return result
     }
-
 }
