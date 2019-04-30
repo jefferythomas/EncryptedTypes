@@ -19,7 +19,8 @@ internal extension Data {
      */
     func memoryMapped<Value>(as type: Value.Type) -> Value? {
         #if swift(>=5.0)
-        return withUnsafeBytes { $0.baseAddress?.bindMemory(to: type, capacity: 1).pointee }
+        guard count == MemoryLayout<Value>.size else { return nil }
+        return withUnsafeBytes { $0.baseAddress?.assumingMemoryBound(to: Value.self).pointee }
         #else
         guard count == MemoryLayout<Value>.size else { return nil }
         return withUnsafeBytes { $0.pointee }
