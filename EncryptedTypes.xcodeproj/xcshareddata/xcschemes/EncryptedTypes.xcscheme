@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7B13EFDA224EF02A000F7689"
+               BlueprintIdentifier = "867C4C5085F5B0F25DCA9C5A49F49003"
                BuildableName = "EncryptedTypes.framework"
                BlueprintName = "EncryptedTypes"
-               ReferencedContainer = "container:EncryptedTypes.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7B13EFE3224EF02A000F7689"
-               BuildableName = "EncryptedTypesTests.xctest"
-               BlueprintName = "EncryptedTypesTests"
                ReferencedContainer = "container:EncryptedTypes.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,7 +33,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7B13EFE3224EF02A000F7689"
+               BlueprintIdentifier = "5C2280DEA61CDA99BDE7E390553949F2"
                BuildableName = "EncryptedTypesTests.xctest"
                BlueprintName = "EncryptedTypesTests"
                ReferencedContainer = "container:EncryptedTypes.xcodeproj">
@@ -57,12 +43,14 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7B13EFDA224EF02A000F7689"
+            BlueprintIdentifier = "867C4C5085F5B0F25DCA9C5A49F49003"
             BuildableName = "EncryptedTypes.framework"
             BlueprintName = "EncryptedTypes"
             ReferencedContainer = "container:EncryptedTypes.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+      <CommandLineArguments>
+      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -79,12 +67,14 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7B13EFDA224EF02A000F7689"
+            BlueprintIdentifier = "867C4C5085F5B0F25DCA9C5A49F49003"
             BuildableName = "EncryptedTypes.framework"
             BlueprintName = "EncryptedTypes"
             ReferencedContainer = "container:EncryptedTypes.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+      <CommandLineArguments>
+      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -94,15 +84,18 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7B13EFDA224EF02A000F7689"
+            BlueprintIdentifier = "867C4C5085F5B0F25DCA9C5A49F49003"
             BuildableName = "EncryptedTypes.framework"
             BlueprintName = "EncryptedTypes"
             ReferencedContainer = "container:EncryptedTypes.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
+      <CommandLineArguments>
+      </CommandLineArguments>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

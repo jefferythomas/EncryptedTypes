@@ -1,0 +1,33 @@
+name: EncryptedTypes
+
+options:
+  bundleIdPrefix: com.jltsource
+  xcodeVersion: 10.2
+  defaultConfig: Release
+
+settings:
+  SWIFT_VERSION: 4.2
+
+targets:
+  EncryptedTypes:
+    type: framework
+    platform: iOS
+    deploymentTarget: "10.0"
+    sources: [EncryptedTypes]
+
+    scheme:
+      testTargets: [EncryptedTypesTests]
+      gatherCoverageData: true
+
+    postCompileScripts:
+      - path: bin/run_swiftlint.sh
+        name: SwiftLint
+
+  EncryptedTypesTests:
+    type: bundle.unit-test
+    platform: iOS
+    deploymentTarget: "10.0"
+    sources: [EncryptedTypesTests]
+
+    dependencies:
+      - target: EncryptedTypes

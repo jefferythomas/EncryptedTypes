@@ -3,153 +3,177 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7B09E79722518902000F208A /* EncryptedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E79622518902000F208A /* EncryptedString.swift */; };
-		7B09E7992251A6A2000F208A /* ValueHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E7982251A6A2000F208A /* ValueHolder.swift */; };
-		7B09E79B2251A865000F208A /* EncryptedInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E79A2251A865000F208A /* EncryptedInt.swift */; };
-		7B09E79D2251AD98000F208A /* EncryptedDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E79C2251AD98000F208A /* EncryptedDouble.swift */; };
-		7B09E79F2251AE01000F208A /* EncryptedBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E79E2251AE01000F208A /* EncryptedBool.swift */; };
-		7B09E7A122521D28000F208A /* EncryptedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E7A022521D28000F208A /* EncryptedData.swift */; };
-		7B13EFE5224EF02A000F7689 /* EncryptedTypes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B13EFDB224EF02A000F7689 /* EncryptedTypes.framework */; };
-		7B13EFEA224EF02A000F7689 /* EncryptedTypesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B13EFE9224EF02A000F7689 /* EncryptedTypesTests.swift */; };
-		7B13EFEC224EF02A000F7689 /* EncryptedTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B13EFDE224EF02A000F7689 /* EncryptedTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7B13EFF6224EF083000F7689 /* Symmetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B13EFF5224EF083000F7689 /* Symmetric.swift */; };
-		7B13EFF922503644000F7689 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B13EFF822503644000F7689 /* Data+Extensions.swift */; };
-		7BB0FD232252DC4700DAA9B5 /* Encrypted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB0FD222252DC4700DAA9B5 /* Encrypted.swift */; };
-		7BE96D4622616ADF00FAD9FC /* Encryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE96D4522616ADF00FAD9FC /* Encryptor.swift */; };
-		CF0FA9D6225F726A000C25D1 /* EncryptedTypesInternalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0FA9D5225F726A000C25D1 /* EncryptedTypesInternalTests.swift */; };
+		07F09A9D2A534179B42D8F929C66C934 /* Encryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6DF0FC8D1AB464897030DB2ECB80E2 /* Encryptor.swift */; };
+		1950050FFC759BC85F5E7BDA24638662 /* EncryptedTypesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD1B2100BA746464FA9DD3936981E0 /* EncryptedTypesTests.swift */; };
+		1BBB6FED29587E1141C23CD903976A37 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C2B991840F1BCCA0A76719472DC47D /* Data+Extensions.swift */; };
+		265414CFD4F1E1BA05954D740B80F9A0 /* EncryptedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2A82673C6D9102365E2F1756FE19A6 /* EncryptedString.swift */; };
+		2CF6705C37615206EBF77F35ADAB5ACC /* Encrypted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B736D7CAE114D8587634ECD5B426599 /* Encrypted.swift */; };
+		3060A125855544B658A820BADF845EAE /* EncryptedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31C4E434D1A1EE83023E531AA89815A /* EncryptedData.swift */; };
+		32915D1497374C70EFD7AF842D22D97D /* EncryptedInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D9CE92AF416840D71B30A53910181 /* EncryptedInt.swift */; };
+		38E89B78356C20313DD20A4410C7AABF /* ValueHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0236E7F12E7E51125E2D64F3DBA47245 /* ValueHolder.swift */; };
+		3D113FD803D5CE93A73D4BDCAD5F274C /* EncryptedBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B614985305BD60794BD5E0689D8CFCF3 /* EncryptedBool.swift */; };
+		65B36CF2CEFDBBF9FE06FE9CE3B94D31 /* EncryptedTypes.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3EA38F34E46CAA3759AE203A7D9494E7 /* EncryptedTypes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		74B657F0AD488DD78EA1A605D6589755 /* EncryptedTypesInternalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168C5AA0B9CA1C3E9C3C94C3AD3B80E /* EncryptedTypesInternalTests.swift */; };
+		DCDAEAE541DB10F67BDCCFDE82D558E3 /* EncryptedTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = AD5F1B03BB5D8A27A5EA91B767D0E968 /* EncryptedTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0EFA8BD24C4A6D3672FC00EF51B939E /* EncryptedTypes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EA38F34E46CAA3759AE203A7D9494E7 /* EncryptedTypes.framework */; };
+		F802F1DA863287AA2A97AB625C353405 /* Symmetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB189C7E17CB12B334C32F09D90793C /* Symmetric.swift */; };
+		F997F8298F2AAF7483EC89B6149ADC51 /* EncryptedDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004E7BC20BCA713B64F4E96721B21743 /* EncryptedDouble.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7B13EFE6224EF02A000F7689 /* PBXContainerItemProxy */ = {
+		5AF9B61B35679DC29D3AB44809C33E2D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 7B13EFD2224EF02A000F7689 /* Project object */;
+			containerPortal = A2ACBCEF2D95E69E35D8806871BAC296 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7B13EFDA224EF02A000F7689;
+			remoteGlobalIDString = 867C4C5085F5B0F25DCA9C5A49F49003;
 			remoteInfo = EncryptedTypes;
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3963330CD47B056D4009EF552C65BA60 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				65B36CF2CEFDBBF9FE06FE9CE3B94D31 /* EncryptedTypes.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		7B09E79622518902000F208A /* EncryptedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedString.swift; sourceTree = "<group>"; };
-		7B09E7982251A6A2000F208A /* ValueHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueHolder.swift; sourceTree = "<group>"; };
-		7B09E79A2251A865000F208A /* EncryptedInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedInt.swift; sourceTree = "<group>"; };
-		7B09E79C2251AD98000F208A /* EncryptedDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedDouble.swift; sourceTree = "<group>"; };
-		7B09E79E2251AE01000F208A /* EncryptedBool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedBool.swift; sourceTree = "<group>"; };
-		7B09E7A022521D28000F208A /* EncryptedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedData.swift; sourceTree = "<group>"; };
-		7B13EFDB224EF02A000F7689 /* EncryptedTypes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EncryptedTypes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B13EFDE224EF02A000F7689 /* EncryptedTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EncryptedTypes.h; sourceTree = "<group>"; };
-		7B13EFDF224EF02A000F7689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7B13EFE4224EF02A000F7689 /* EncryptedTypesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EncryptedTypesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B13EFE9224EF02A000F7689 /* EncryptedTypesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedTypesTests.swift; sourceTree = "<group>"; };
-		7B13EFEB224EF02A000F7689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7B13EFF5224EF083000F7689 /* Symmetric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symmetric.swift; sourceTree = "<group>"; };
-		7B13EFF822503644000F7689 /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
-		7BB0FD222252DC4700DAA9B5 /* Encrypted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encrypted.swift; sourceTree = "<group>"; };
-		7BE96D4522616ADF00FAD9FC /* Encryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encryptor.swift; sourceTree = "<group>"; };
-		CF0FA9D5225F726A000C25D1 /* EncryptedTypesInternalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedTypesInternalTests.swift; sourceTree = "<group>"; };
+		004E7BC20BCA713B64F4E96721B21743 /* EncryptedDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedDouble.swift; sourceTree = "<group>"; };
+		0168C5AA0B9CA1C3E9C3C94C3AD3B80E /* EncryptedTypesInternalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedTypesInternalTests.swift; sourceTree = "<group>"; };
+		0236E7F12E7E51125E2D64F3DBA47245 /* ValueHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueHolder.swift; sourceTree = "<group>"; };
+		0A6DF0FC8D1AB464897030DB2ECB80E2 /* Encryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encryptor.swift; sourceTree = "<group>"; };
+		386D9CE92AF416840D71B30A53910181 /* EncryptedInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedInt.swift; sourceTree = "<group>"; };
+		3DB189C7E17CB12B334C32F09D90793C /* Symmetric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symmetric.swift; sourceTree = "<group>"; };
+		3EA38F34E46CAA3759AE203A7D9494E7 /* EncryptedTypes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EncryptedTypes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B736D7CAE114D8587634ECD5B426599 /* Encrypted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encrypted.swift; sourceTree = "<group>"; };
+		8B2A82673C6D9102365E2F1756FE19A6 /* EncryptedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedString.swift; sourceTree = "<group>"; };
+		AD5F1B03BB5D8A27A5EA91B767D0E968 /* EncryptedTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EncryptedTypes.h; sourceTree = "<group>"; };
+		B614985305BD60794BD5E0689D8CFCF3 /* EncryptedBool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedBool.swift; sourceTree = "<group>"; };
+		B9C2B991840F1BCCA0A76719472DC47D /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
+		CAAD1B2100BA746464FA9DD3936981E0 /* EncryptedTypesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedTypesTests.swift; sourceTree = "<group>"; };
+		DD7DF9C51CB7D1DBF3E7C04B0D523611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E31C4E434D1A1EE83023E531AA89815A /* EncryptedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedData.swift; sourceTree = "<group>"; };
+		EF16020A2C14EB873AD692281521D564 /* EncryptedTypesTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = EncryptedTypesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F607B0BA7050AFFE287D4DA9502A37F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7B13EFD8224EF02A000F7689 /* Frameworks */ = {
+		7CB510E14C834FB3B263B5B448542431 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7B13EFE1224EF02A000F7689 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7B13EFE5224EF02A000F7689 /* EncryptedTypes.framework in Frameworks */,
+				F0EFA8BD24C4A6D3672FC00EF51B939E /* EncryptedTypes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7B13EFD1224EF02A000F7689 = {
+		4294420100E6B6460B4FBB09F91DF64B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7B13EFDD224EF02A000F7689 /* EncryptedTypes */,
-				7B13EFE8224EF02A000F7689 /* EncryptedTypesTests */,
-				7B13EFDC224EF02A000F7689 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		7B13EFDC224EF02A000F7689 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7B13EFDB224EF02A000F7689 /* EncryptedTypes.framework */,
-				7B13EFE4224EF02A000F7689 /* EncryptedTypesTests.xctest */,
+				3EA38F34E46CAA3759AE203A7D9494E7 /* EncryptedTypes.framework */,
+				EF16020A2C14EB873AD692281521D564 /* EncryptedTypesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7B13EFDD224EF02A000F7689 /* EncryptedTypes */ = {
+		4A34C4C8E6F72661DA243443248ADFDE /* FrameworkItems */ = {
 			isa = PBXGroup;
 			children = (
-				7B13EFF822503644000F7689 /* Data+Extensions.swift */,
-				7BB0FD222252DC4700DAA9B5 /* Encrypted.swift */,
-				7B09E79E2251AE01000F208A /* EncryptedBool.swift */,
-				7B09E7A022521D28000F208A /* EncryptedData.swift */,
-				7B09E79C2251AD98000F208A /* EncryptedDouble.swift */,
-				7B09E79A2251A865000F208A /* EncryptedInt.swift */,
-				7B09E79622518902000F208A /* EncryptedString.swift */,
-				7BE96D4522616ADF00FAD9FC /* Encryptor.swift */,
-				7B13EFF5224EF083000F7689 /* Symmetric.swift */,
-				7B09E7982251A6A2000F208A /* ValueHolder.swift */,
-				7BE96D4722616C5300FAD9FC /* FrameworkItems */,
+				AD5F1B03BB5D8A27A5EA91B767D0E968 /* EncryptedTypes.h */,
+				DD7DF9C51CB7D1DBF3E7C04B0D523611 /* Info.plist */,
 			);
-			path = EncryptedTypes;
+			path = FrameworkItems;
 			sourceTree = "<group>";
 		};
-		7B13EFE8224EF02A000F7689 /* EncryptedTypesTests */ = {
+		B6641924ED6EAB57AE4E163182599D19 = {
 			isa = PBXGroup;
 			children = (
-				7B13EFE9224EF02A000F7689 /* EncryptedTypesTests.swift */,
-				CF0FA9D5225F726A000C25D1 /* EncryptedTypesInternalTests.swift */,
-				7B13EFEB224EF02A000F7689 /* Info.plist */,
+				F494B73941A08BAAA08BA3CEF861F902 /* EncryptedTypes */,
+				EF5A472FD9A43C5063BECE9D15FED2FF /* EncryptedTypesTests */,
+				4294420100E6B6460B4FBB09F91DF64B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF5A472FD9A43C5063BECE9D15FED2FF /* EncryptedTypesTests */ = {
+			isa = PBXGroup;
+			children = (
+				0168C5AA0B9CA1C3E9C3C94C3AD3B80E /* EncryptedTypesInternalTests.swift */,
+				CAAD1B2100BA746464FA9DD3936981E0 /* EncryptedTypesTests.swift */,
+				F607B0BA7050AFFE287D4DA9502A37F9 /* Info.plist */,
 			);
 			path = EncryptedTypesTests;
 			sourceTree = "<group>";
 		};
-		7BE96D4722616C5300FAD9FC /* FrameworkItems */ = {
+		F494B73941A08BAAA08BA3CEF861F902 /* EncryptedTypes */ = {
 			isa = PBXGroup;
 			children = (
-				7B13EFDE224EF02A000F7689 /* EncryptedTypes.h */,
-				7B13EFDF224EF02A000F7689 /* Info.plist */,
+				B9C2B991840F1BCCA0A76719472DC47D /* Data+Extensions.swift */,
+				6B736D7CAE114D8587634ECD5B426599 /* Encrypted.swift */,
+				B614985305BD60794BD5E0689D8CFCF3 /* EncryptedBool.swift */,
+				E31C4E434D1A1EE83023E531AA89815A /* EncryptedData.swift */,
+				004E7BC20BCA713B64F4E96721B21743 /* EncryptedDouble.swift */,
+				386D9CE92AF416840D71B30A53910181 /* EncryptedInt.swift */,
+				8B2A82673C6D9102365E2F1756FE19A6 /* EncryptedString.swift */,
+				0A6DF0FC8D1AB464897030DB2ECB80E2 /* Encryptor.swift */,
+				3DB189C7E17CB12B334C32F09D90793C /* Symmetric.swift */,
+				0236E7F12E7E51125E2D64F3DBA47245 /* ValueHolder.swift */,
+				4A34C4C8E6F72661DA243443248ADFDE /* FrameworkItems */,
 			);
-			path = FrameworkItems;
+			path = EncryptedTypes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		7B13EFD6224EF02A000F7689 /* Headers */ = {
+		D88698A5068DE399382D2304EFCFBA49 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B13EFEC224EF02A000F7689 /* EncryptedTypes.h in Headers */,
+				DCDAEAE541DB10F67BDCCFDE82D558E3 /* EncryptedTypes.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7B13EFDA224EF02A000F7689 /* EncryptedTypes */ = {
+		5C2280DEA61CDA99BDE7E390553949F2 /* EncryptedTypesTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7B13EFEF224EF02A000F7689 /* Build configuration list for PBXNativeTarget "EncryptedTypes" */;
+			buildConfigurationList = 27C91E3B695EA9F9784B365F75E26233 /* Build configuration list for PBXNativeTarget "EncryptedTypesTests" */;
 			buildPhases = (
-				7B13EFD6224EF02A000F7689 /* Headers */,
-				7B13EFD7224EF02A000F7689 /* Sources */,
-				7B13EFD8224EF02A000F7689 /* Frameworks */,
-				7B13EFD9224EF02A000F7689 /* Resources */,
-				7B13EFF7224EF12E000F7689 /* ShellScript */,
+				D79B084000F174A5123C08FF4A9B0A76 /* Sources */,
+				7CB510E14C834FB3B263B5B448542431 /* Frameworks */,
+				3963330CD47B056D4009EF552C65BA60 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67BA516DF205B7AC133F975D7173D872 /* PBXTargetDependency */,
+			);
+			name = EncryptedTypesTests;
+			productName = EncryptedTypesTests;
+			productReference = EF16020A2C14EB873AD692281521D564 /* EncryptedTypesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		867C4C5085F5B0F25DCA9C5A49F49003 /* EncryptedTypes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B09FBA443DE897774BA5D5DCFC30C2F8 /* Build configuration list for PBXNativeTarget "EncryptedTypes" */;
+			buildPhases = (
+				D88698A5068DE399382D2304EFCFBA49 /* Headers */,
+				D491BD1D866AD8712C6B95B44E438D96 /* Sources */,
+				12EBEF343B61771519000CE3ED37130F /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -157,83 +181,36 @@
 			);
 			name = EncryptedTypes;
 			productName = EncryptedTypes;
-			productReference = 7B13EFDB224EF02A000F7689 /* EncryptedTypes.framework */;
+			productReference = 3EA38F34E46CAA3759AE203A7D9494E7 /* EncryptedTypes.framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		7B13EFE3224EF02A000F7689 /* EncryptedTypesTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7B13EFF2224EF02A000F7689 /* Build configuration list for PBXNativeTarget "EncryptedTypesTests" */;
-			buildPhases = (
-				7B13EFE0224EF02A000F7689 /* Sources */,
-				7B13EFE1224EF02A000F7689 /* Frameworks */,
-				7B13EFE2224EF02A000F7689 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7B13EFE7224EF02A000F7689 /* PBXTargetDependency */,
-			);
-			name = EncryptedTypesTests;
-			productName = EncryptedTypesTests;
-			productReference = 7B13EFE4224EF02A000F7689 /* EncryptedTypesTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		7B13EFD2224EF02A000F7689 /* Project object */ = {
+		A2ACBCEF2D95E69E35D8806871BAC296 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
-				ORGANIZATIONNAME = "JLT Source";
-				TargetAttributes = {
-					7B13EFDA224EF02A000F7689 = {
-						CreatedOnToolsVersion = 10.2;
-						LastSwiftMigration = 1020;
-					};
-					7B13EFE3224EF02A000F7689 = {
-						CreatedOnToolsVersion = 10.2;
-					};
-				};
 			};
-			buildConfigurationList = 7B13EFD5224EF02A000F7689 /* Build configuration list for PBXProject "EncryptedTypes" */;
+			buildConfigurationList = 548CF64B6E4C848EE9FC1EB7BC651129 /* Build configuration list for PBXProject "EncryptedTypes" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 7B13EFD1224EF02A000F7689;
-			productRefGroup = 7B13EFDC224EF02A000F7689 /* Products */;
+			mainGroup = B6641924ED6EAB57AE4E163182599D19;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7B13EFDA224EF02A000F7689 /* EncryptedTypes */,
-				7B13EFE3224EF02A000F7689 /* EncryptedTypesTests */,
+				867C4C5085F5B0F25DCA9C5A49F49003 /* EncryptedTypes */,
+				5C2280DEA61CDA99BDE7E390553949F2 /* EncryptedTypesTests */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		7B13EFD9224EF02A000F7689 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7B13EFE2224EF02A000F7689 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXShellScriptBuildPhase section */
-		7B13EFF7224EF12E000F7689 /* ShellScript */ = {
+		12EBEF343B61771519000CE3ED37130F /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -242,6 +219,7 @@
 			);
 			inputPaths = (
 			);
+			name = SwiftLint;
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -253,44 +231,44 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7B13EFD7224EF02A000F7689 /* Sources */ = {
+		D491BD1D866AD8712C6B95B44E438D96 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B09E7992251A6A2000F208A /* ValueHolder.swift in Sources */,
-				7B09E79B2251A865000F208A /* EncryptedInt.swift in Sources */,
-				7BE96D4622616ADF00FAD9FC /* Encryptor.swift in Sources */,
-				7B13EFF6224EF083000F7689 /* Symmetric.swift in Sources */,
-				7B09E79F2251AE01000F208A /* EncryptedBool.swift in Sources */,
-				7B09E79722518902000F208A /* EncryptedString.swift in Sources */,
-				7B13EFF922503644000F7689 /* Data+Extensions.swift in Sources */,
-				7B09E7A122521D28000F208A /* EncryptedData.swift in Sources */,
-				7BB0FD232252DC4700DAA9B5 /* Encrypted.swift in Sources */,
-				7B09E79D2251AD98000F208A /* EncryptedDouble.swift in Sources */,
+				1BBB6FED29587E1141C23CD903976A37 /* Data+Extensions.swift in Sources */,
+				2CF6705C37615206EBF77F35ADAB5ACC /* Encrypted.swift in Sources */,
+				3D113FD803D5CE93A73D4BDCAD5F274C /* EncryptedBool.swift in Sources */,
+				3060A125855544B658A820BADF845EAE /* EncryptedData.swift in Sources */,
+				F997F8298F2AAF7483EC89B6149ADC51 /* EncryptedDouble.swift in Sources */,
+				32915D1497374C70EFD7AF842D22D97D /* EncryptedInt.swift in Sources */,
+				265414CFD4F1E1BA05954D740B80F9A0 /* EncryptedString.swift in Sources */,
+				07F09A9D2A534179B42D8F929C66C934 /* Encryptor.swift in Sources */,
+				F802F1DA863287AA2A97AB625C353405 /* Symmetric.swift in Sources */,
+				38E89B78356C20313DD20A4410C7AABF /* ValueHolder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7B13EFE0224EF02A000F7689 /* Sources */ = {
+		D79B084000F174A5123C08FF4A9B0A76 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B13EFEA224EF02A000F7689 /* EncryptedTypesTests.swift in Sources */,
-				CF0FA9D6225F726A000C25D1 /* EncryptedTypesInternalTests.swift in Sources */,
+				74B657F0AD488DD78EA1A605D6589755 /* EncryptedTypesInternalTests.swift in Sources */,
+				1950050FFC759BC85F5E7BDA24638662 /* EncryptedTypesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7B13EFE7224EF02A000F7689 /* PBXTargetDependency */ = {
+		67BA516DF205B7AC133F975D7173D872 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7B13EFDA224EF02A000F7689 /* EncryptedTypes */;
-			targetProxy = 7B13EFE6224EF02A000F7689 /* PBXContainerItemProxy */;
+			target = 867C4C5085F5B0F25DCA9C5A49F49003 /* EncryptedTypes */;
+			targetProxy = 5AF9B61B35679DC29D3AB44809C33E2D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		7B13EFED224EF02A000F7689 /* Debug */ = {
+		0577470BC6F03D23CE4B8687C201543B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -300,7 +278,6 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -322,9 +299,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -333,8 +308,8 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
 					"$(inherited)",
+					"DEBUG=1",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -342,19 +317,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
-		7B13EFEE224EF02A000F7689 /* Release */ = {
+		6AC6BFB9BD911A56C232E00B3CD04F12 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -364,7 +337,6 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -386,9 +358,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -400,107 +370,78 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		715D4440A63A8A2EB53C9FE1725D6143 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = EncryptedTypes/FrameworkItems/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jltsource.EncryptedTypes;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		7B13EFF0224EF02A000F7689 /* Debug */ = {
+		A1752911FE210148086A99F4AFF3D362 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 7KZ9WRXA6T;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = EncryptedTypes/FrameworkItems/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jltsource.EncryptedTypes;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
-		7B13EFF1224EF02A000F7689 /* Release */ = {
+		B688E3FDCF08135CE3562515A642E9E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 7KZ9WRXA6T;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = EncryptedTypes/FrameworkItems/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = EncryptedTypesTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jltsource.EncryptedTypes;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		7B13EFF3224EF02A000F7689 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7KZ9WRXA6T;
-				INFOPLIST_FILE = EncryptedTypesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jltsource.EncryptedTypesTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		7B13EFF4224EF02A000F7689 /* Release */ = {
+		BA101E34B5AE557FBA0C483A3A6D08FD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7KZ9WRXA6T;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = EncryptedTypesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jltsource.EncryptedTypesTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -508,34 +449,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7B13EFD5224EF02A000F7689 /* Build configuration list for PBXProject "EncryptedTypes" */ = {
+		27C91E3B695EA9F9784B365F75E26233 /* Build configuration list for PBXNativeTarget "EncryptedTypesTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7B13EFED224EF02A000F7689 /* Debug */,
-				7B13EFEE224EF02A000F7689 /* Release */,
+				B688E3FDCF08135CE3562515A642E9E7 /* Debug */,
+				BA101E34B5AE557FBA0C483A3A6D08FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "";
+		};
+		548CF64B6E4C848EE9FC1EB7BC651129 /* Build configuration list for PBXProject "EncryptedTypes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0577470BC6F03D23CE4B8687C201543B /* Debug */,
+				6AC6BFB9BD911A56C232E00B3CD04F12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B13EFEF224EF02A000F7689 /* Build configuration list for PBXNativeTarget "EncryptedTypes" */ = {
+		B09FBA443DE897774BA5D5DCFC30C2F8 /* Build configuration list for PBXNativeTarget "EncryptedTypes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7B13EFF0224EF02A000F7689 /* Debug */,
-				7B13EFF1224EF02A000F7689 /* Release */,
+				A1752911FE210148086A99F4AFF3D362 /* Debug */,
+				715D4440A63A8A2EB53C9FE1725D6143 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7B13EFF2224EF02A000F7689 /* Build configuration list for PBXNativeTarget "EncryptedTypesTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7B13EFF3224EF02A000F7689 /* Debug */,
-				7B13EFF4224EF02A000F7689 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "";
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 7B13EFD2224EF02A000F7689 /* Project object */;
+	rootObject = A2ACBCEF2D95E69E35D8806871BAC296 /* Project object */;
 }
