@@ -6,7 +6,7 @@ options:
   defaultConfig: Release
 
 settings:
-  SWIFT_VERSION: 4.2
+  SWIFT_VERSION: 5
 
 targets:
   EncryptedTypes:
