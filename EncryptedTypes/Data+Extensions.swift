@@ -18,13 +18,8 @@ internal extension Data {
      Map the memory in data to the specified type.
      */
     func memoryMapped<Value>(as type: Value.Type) -> Value? {
-        #if swift(>=5.0)
         guard count == MemoryLayout<Value>.size else { return nil }
         return withUnsafeBytes { $0.baseAddress?.assumingMemoryBound(to: Value.self).pointee }
-        #else
-        guard count == MemoryLayout<Value>.size else { return nil }
-        return withUnsafeBytes { $0.pointee }
-        #endif
     }
 
     /**
@@ -32,29 +27,5 @@ internal extension Data {
      */
     init<Value>(memoryMapped value: Value, as _: Value.Type) {
         self = Swift.withUnsafeBytes(of: value) { Data($0) }
-    }
-
-    /**
-     Version safe access to `withUnsafeBytes(_:)`.
-     */
-    func withUnsafeBuffer<Result>(_ body: (UnsafeRawPointer?, Int) -> Result) -> Result {
-        #if swift(>=5.0)
-        return withUnsafeBytes { body($0.baseAddress, $0.count) }
-        #else
-        let count = self.count
-        return withUnsafeBytes { body($0, count) }
-        #endif
-    }
-
-    /**
-     Version safe access to `withUnsafeMutableBytes(_:)`.
-     */
-    mutating func withUnsafeMutableBuffer<Result>(_ body: (UnsafeMutableRawPointer?, Int) -> Result) -> Result {
-        #if swift(>=5.0)
-        return withUnsafeMutableBytes { body($0.baseAddress, $0.count) }
-        #else
-        let count = self.count
-        return withUnsafeMutableBytes { body($0, count) }
-        #endif
     }
 }
