@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "867C4C5085F5B0F25DCA9C5A49F49003"
+               BlueprintIdentifier = "867C4C5085F5B0F25DCA9C5A"
                BuildableName = "EncryptedTypes.framework"
                BlueprintName = "EncryptedTypes"
                ReferencedContainer = "container:EncryptedTypes.xcodeproj">
@@ -27,13 +27,14 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "NO"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5C2280DEA61CDA99BDE7E390553949F2"
+               BlueprintIdentifier = "5C2280DEA61CDA99BDE7E390"
                BuildableName = "EncryptedTypesTests.xctest"
                BlueprintName = "EncryptedTypesTests"
                ReferencedContainer = "container:EncryptedTypes.xcodeproj">
@@ -43,7 +44,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "867C4C5085F5B0F25DCA9C5A49F49003"
+            BlueprintIdentifier = "867C4C5085F5B0F25DCA9C5A"
             BuildableName = "EncryptedTypes.framework"
             BlueprintName = "EncryptedTypes"
             ReferencedContainer = "container:EncryptedTypes.xcodeproj">
@@ -53,6 +54,8 @@
       </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
+      <CodeCoverageTargets>
+      </CodeCoverageTargets>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -67,7 +70,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "867C4C5085F5B0F25DCA9C5A49F49003"
+            BlueprintIdentifier = "867C4C5085F5B0F25DCA9C5A"
             BuildableName = "EncryptedTypes.framework"
             BlueprintName = "EncryptedTypes"
             ReferencedContainer = "container:EncryptedTypes.xcodeproj">
@@ -88,7 +91,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "867C4C5085F5B0F25DCA9C5A49F49003"
+            BlueprintIdentifier = "867C4C5085F5B0F25DCA9C5A"
             BuildableName = "EncryptedTypes.framework"
             BlueprintName = "EncryptedTypes"
             ReferencedContainer = "container:EncryptedTypes.xcodeproj">

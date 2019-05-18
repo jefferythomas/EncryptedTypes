@@ -3,65 +3,93 @@
 //  EncryptedTypes
 //
 //  Created by Jeffery Thomas on 4/1/19.
-//  Copyright © 2019 JLT Source. No rights reserved.
 //
 
-/**
- The base class for encrypted types that simplifies the implementation of the
- ValueHolder and Encryptor protocols. Subclasses only need to implement
- `fromData(_:)` and `toData(_:)`
- */
-open class Encrypted<Value>: ValueHolder, Encryptor {
-    // MARK: ValueHolder
+// MARK: - Encrypted
 
-    /**
-     Temporary access to the unencrypted value.
-     */
-    open var value: Value? {
-        get { return decrypt() }
-        set { encrypt(newValue) }
+/// A wrapper that encrypts a value in memory.
+///
+/// The encrypted value can be set and retrieved.
+public struct Encrypted<Value: Encryptable> {
+    /// Temporary access to the unencrypted value.
+    public var value: Value? {
+        get { try? fetch() }
+        set { try? save(newValue) }
     }
 
-    // MARK: Encryptor
+    /// Decrypt the value.
+    public func fetch() throws -> Value? {
+        guard let ciphertext = ciphertext else { return nil }
+        let encryptableData = try encryptor.decrypt(ciphertext)
 
-    /**
-     Decrypt the value from a given encrypted data.
-     */
-    open func decrypt() -> Value? {
-        return fromData(encrypted.map { symmetric.decrypt($0) })
+        return try Value(fromEncryptableData: encryptableData)
     }
 
-    /**
-     Encrypt the given value to an encrypted data block.
-     */
-    open func encrypt(_ value: Value?) {
-        encrypted = toData(value).map { symmetric.encrypt($0) }
+    /// Save an encrypted copy of the value.
+    /// - Parameter value: The new value to encrypt.
+    public mutating func save(_ value: Value?) throws {
+        if let encryptableData = try value?.makeEncryptableData() {
+            ciphertext = try encryptor.encrypt(encryptableData)
+        } else {
+            ciphertext = nil
+        }
     }
 
-    // MARK: Required overrides
-
-    /**
-     Return the value from a given data object.
-     */
-    open func fromData(_: Data?) -> Value? {
-        fatalError("fromData(_:) must be overloaded in a subclass")
+    /// Creates a new encrypted value.
+    ///
+    /// The default encryptor is used.
+    ///
+    ///   - value: *optional* The initial value. Defaults to nil.
+    public init(value: Value? = nil) {
+        self = Encrypted(value: value, encryptor: SystemEncryptor.factory())
     }
 
-    /**
-     Return a data object from the given value.
-     */
-    open func toData(_: Value?) -> Data? {
-        fatalError("toData(_:) must be overloaded in a subclass")
+    /// Creates a new encrypted value.
+    ///
+    /// - Parameters:
+    ///   - value: *optional* The initial value. Defaults to nil.
+    ///   - encryptor: The encryptor that encrypts and decrypts the value.
+    public init(value: Value? = nil, encryptor: Encryptor) {
+        self.encryptor = encryptor
+        try? save(value)
     }
 
-    // MARK: Memory lifecycle
+    private let encryptor: Encryptor
+    private var ciphertext: Encryptor.Ciphertext?
+}
 
-    public init(symmetric: Symmetric = .shared) {
-        self.symmetric = symmetric
+// MARK: - Encryptable Encrypted
+
+extension Encryptable {
+    /// Return an encrypted instance.
+    func encrypted() -> Encrypted<Self> {
+        Encrypted(value: self)
     }
+}
 
-    // MARK: Private properties
+// MARK: - Encrypted Codable
 
-    private let symmetric: Symmetric
-    private var encrypted: Data?
+extension Encrypted: Decodable where Value: Decodable {
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+
+        if container.decodeNil() {
+            self.init(value: nil)
+        } else {
+            let value = try container.decode(Value.self)
+            self.init(value: value)
+        }
+    }
+}
+
+extension Encrypted: Encodable where Value: Encodable {
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.singleValueContainer()
+
+        if let value = value {
+            try container.encode(value)
+        } else {
+            try container.encodeNil()
+        }
+    }
 }

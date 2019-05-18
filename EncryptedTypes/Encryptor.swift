@@ -2,23 +2,25 @@
 //  Encryptor.swift
 //  EncryptedTypes
 //
-//  Created by Jeffery Thomas on 4/12/19.
-//  Copyright © 2019 JLT Source. No rights reserved.
+//  Created by Jeffery Thomas on 5/22/19.
 //
 
-/**
- An encryptor that can encrypt and decrypt a value.
- */
+import Foundation
+
+// MARK: - Encryptor
+
+/// A protocol to handle encrypting data into ciphertext and decrypting ciphertext back to data.
 public protocol Encryptor {
-    associatedtype Value
+    /// Ciphertext is the enctyped data.
+    typealias Ciphertext = Data
 
-    /**
-     Decrypt a value from a given encrypted data.
-     */
-    nonmutating func decrypt() -> Value?
+    /// Convert data into ciphertext (enctyped data).
+    /// - Parameter data: The data to encrypt.
+    /// - Returns: The ciphertext of the data.
+    func encrypt(_ data: Data) throws -> Ciphertext
 
-    /**
-     Encrypt a given value to an encrypted data block.
-     */
-    mutating func encrypt(_ value: Value?)
+    /// Convert ciphertext (encrypted data) into the plaintext data.
+    /// - Parameter ciphertext: The ciphertext to decrypt.
+    /// - Returns: The plaintext data.
+    func decrypt(_ ciphertext: Ciphertext) throws -> Data
 }

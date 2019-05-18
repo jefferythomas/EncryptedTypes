@@ -1,0 +1,10 @@
+included:
+  - EncryptedTypes
+  - EncryptedTypesTests
+
+identifier_name:
+  excluded:
+    - iv
+
+opt_in_rules:
+  - trailing_closure

@@ -5,3 +5,4 @@
 
 # rules
 --enable trailingClosures
+--stripunusedargs closure-only

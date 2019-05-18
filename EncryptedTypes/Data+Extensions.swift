@@ -3,29 +3,47 @@
 //  EncryptedTypes
 //
 //  Created by Jeffery Thomas on 3/30/19.
-//  Copyright © 2019 JLT Source. No rights reserved.
 //
 
-internal extension Data {
-    /**
-     Create a data object of count bytes filled with random data.
-     */
-    static func randomBytes(count: Int) -> Data {
-        return Data((0 ..< count).map { _ in .random(in: .min ... .max) })
+import Foundation
+
+// MARK: - Memory Mapping
+
+public extension Data {
+    /// Create a new instance of value based on memory mapped data.
+    /// - Parameter type: The type of the instance to be created.
+    /// - Throws: MemoryMappingError.typeInconsistency
+    func makeInstance<Value>(of type: Value.Type) throws -> Value {
+        try withUnsafeBytes { bytes in
+            guard count == MemoryLayout<Value>.size, let address = bytes.baseAddress else {
+                throw MemoryMappingError.typeInconsistency
+            }
+
+            return address.assumingMemoryBound(to: Value.self).pointee
+        }
     }
 
-    /**
-     Map the memory in data to the specified type.
-     */
-    func memoryMapped<Value>(as type: Value.Type) -> Value? {
-        guard count == MemoryLayout<Value>.size else { return nil }
-        return withUnsafeBytes { $0.baseAddress?.assumingMemoryBound(to: Value.self).pointee }
-    }
-
-    /**
-     Map the memory from the given value of given type to a Data object.
-     */
-    init<Value>(memoryMapped value: Value, as _: Value.Type) {
+    /// Create a map of the memory used in value.
+    /// - Parameter value: The value to memory map
+    init<Value>(mappingMemoryOf value: Value) {
         self = Swift.withUnsafeBytes(of: value) { Data($0) }
+    }
+}
+
+// MARK: - Memory Mapping Error
+
+/// Errors the might occur while handling memory maps of other data types.
+public enum MemoryMappingError: Error {
+    /// The data in the memory map does not match the specified type.
+    case typeInconsistency
+}
+
+// MARK: - Random Data
+
+internal extension Data {
+    /// Create a data object of count bytes filled with random data.
+    /// - Parameter count: The number of bytes of random data
+    static func random(count: Int) -> Data {
+        Data((0 ..< count).map { _ in .random(in: .min ... .max) })
     }
 }

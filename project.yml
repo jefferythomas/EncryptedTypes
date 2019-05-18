@@ -2,7 +2,7 @@ name: EncryptedTypes
 
 options:
   bundleIdPrefix: com.jltsource
-  xcodeVersion: 10.2
+  xcodeVersion: 10.3
   defaultConfig: Release
 
 settings:
@@ -12,7 +12,7 @@ targets:
   EncryptedTypes:
     type: framework
     platform: iOS
-    deploymentTarget: "10.0"
+    deploymentTarget: "11.0"
     sources: [EncryptedTypes]
 
     scheme:
@@ -26,7 +26,7 @@ targets:
   EncryptedTypesTests:
     type: bundle.unit-test
     platform: iOS
-    deploymentTarget: "10.0"
+    deploymentTarget: "11.0"
     sources: [EncryptedTypesTests]
 
     dependencies:
